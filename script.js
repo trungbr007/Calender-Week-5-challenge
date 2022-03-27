@@ -26,15 +26,21 @@ $(hoursEl).addClass("present")
 };
 
 //Click the flopy-disk to save the textare into the local storage
-$('.fa-floppy-disk').on('click',function(){
-
-    $('#i').html();
-    localStorage.setItem(key,value);
-})
 
 
+$(document).ready(function() {
+    $(".fa-floppy-disk").click(function(event) {
+        // Get input name
+        var addText = $(".col-8").val();
+        console.log(parent(event.target).id);
+        // Store data
+        localStorage.setItem("", addText);
+       
+        
+    });
 
-
+    $(".col-8").textContent=localStorage.getItem(".fa-floppy-disk")
+}); 
 
 
     
